@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر C7 الإلكتروني</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* شريط علوي */
+    header {
+      background: linear-gradient(90deg, #001233, #003566);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    header .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #64ffda;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #64ffda;
+    }
+
+    /* المحتوى الرئيسي */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cbd5e1;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    a.btn {
+      color: #64ffda;
+      border: 1px solid #64ffda;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    a.btn:hover {
+      background-color: #64ffda;
+      color: #0d1b2a;
+    }
+
+    /* تذييل */
+    footer {
+      background-color: #0b132b;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #adb5bd;
+      border-top: 1px solid #1b263b;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- الشريط العلوي -->
+  <header>
+    <div class="logo">🕹️ C7 Store</div>
+    <nav>
+      <a href="/">الرئيسية</a>
+      <a href="/store/">المتجر</a>
+      <a href="/orders/">طلباتي</a>
+      <a href="/admin/">لوحة التحكم</a>
+    </nav>
+  </header>
+
+  <!-- المحتوى -->
+  <main>
+    <h1>مرحبًا بك في متجر C7 الإلكتروني 🎮</h1>
+    <p>أفضل تجربة لعشاق الألعاب — اكتشف منتجاتنا الآن!</p>
+    <a class="btn" href="/store/">ابدأ التسوق</a>
+  </main>
+
+  <!-- التذييل -->
+  <footer>
+    © 2025 متجر C7 الإلكتروني — جميع الحقوق محفوظة.
+  </footer>
+</body>
+</html>
