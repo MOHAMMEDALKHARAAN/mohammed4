@@ -11,20 +11,26 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    # لوحة الإدارة
+    # 🧭 لوحة الإدارة
     path('admin/', admin.site.urls),
 
-    # التطبيق الأساسي (المستخدمين، الصفحات العامة)
-    path('', include('core.urls')),  
+    # 🧩 التطبيق الأساسي (المستخدمين والصفحات العامة)
+    path('', include('core.urls')),
 
-    # تطبيق المتجر (المنتجات، التصنيفات)
+    # 🛒 تطبيق المتجر (المنتجات والتصنيفات)
     path('store/', include('store.urls')),
 
-    # تطبيق الطلبات والمدفوعات
+    # 📦 تطبيق الطلبات والمدفوعات
     path('orders/', include('orders.urls')),
 ]
 
-# إعدادات ملفات static و media أثناء التطوير
+
+# ==============================
+# ⚙️ إعدادات الملفات الثابتة والإعلامية أثناء التطوير
+# ==============================
 if settings.DEBUG:
+    # عرض الملفات المرفوعة من المستخدمين (media)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+
+    # عرض الملفات الثابتة (static)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
