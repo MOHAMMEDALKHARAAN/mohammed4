@@ -1,25 +1,72 @@
-<header>
-  <div class="logo">
-    <img src="media/logo.png" alt="شعار أدوات السلامة">
-    <h1>أدوات السلامة</h1>
-  </div>
-  <nav>
-    <ul id="navMenu">
-      <li><a href="home.html">الرئيسية</a></li>
-      <li><a href="#">المنتجات</a></li>
-      <li><a href="#">عنّا</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-    </ul>
-  </nav>
-  <div class="burger" id="burgerBtn">
-    <span></span><span></span><span></span>
-  </div>
-</header>
+{% include 'header.html' %}
 
-<script>
-  const burgerBtn = document.getElementById('burgerBtn');
-  const navMenu = document.getElementById('navMenu');
-  burgerBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-</script>
+<main>
+  <style>
+    main {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fff;
+      border-right: 5px solid #d00000;
+      border-left: 5px solid #d00000;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .card {
+      border: 2px solid #d00000;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #000;
+    }
+  </style>
+
+  <section class="intro">
+    <h2>مرحبًا بكم في متجر أدوات السلامة</h2>
+    <p>نوفر لكم جميع مستلزمات السلامة المهنية بأعلى جودة وأفضل الأسعار. هدفنا هو حماية الأرواح وتوفير بيئة عمل آمنة للجميع.</p>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="media/helmet.jpg" alt="خوذة أمان">
+      <h3>خوذة أمان</h3>
+    </div>
+    <div class="card">
+      <img src="media/vest.jpg" alt="سترة عاكسة">
+      <h3>سترة عاكسة</h3>
+    </div>
+    <div class="card">
+      <img src="media/gloves.jpg" alt="قفازات حماية">
+      <h3>قفازات حماية</h3>
+    </div>
+  </section>
+</main>
+
+{% include 'footer.html' %}
